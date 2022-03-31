@@ -1,0 +1,54 @@
+{
+	"name": "portfolio",
+	"prettyName": "© Portfolio Audrey Belhoste",
+	"version": "0.0.1",
+	"description": "Portfolio website for Audrey Belhoste",
+	"main": "gulpfile.js",
+	"author": "Audrey Belhoste",
+	"private": true,
+	"dependencies": {
+		"parallax-js": "^3.1.0"
+	},
+	"scripts": {
+		"start": "gulp live",
+		"build:dev": "gulp",
+		"build:prod": "gulp --production"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all",
+			"safari 5",
+			"ie 9"
+		],
+		"development": [
+			"last 3 version"
+		]
+	},
+	"devDependencies": {
+		"@babel/core": "^7.11.4",
+		"@babel/preset-env": "^7.11.0",
+		"@babel/preset-react": "^7.16.7",
+		"babel-loader": "^8.2.2",
+		"dart-sass": "^1.25.0",
+		"del": "^5.1.0",
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^7.0.1",
+		"gulp-clean-css": "^4.3.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-filter": "^6.0.0",
+		"gulp-plumber": "^1.2.1",
+		"gulp-postcss": "^9.0.1",
+		"gulp-replace": "^1.0.0",
+		"gulp-sass": "^5.1.0",
+		"gulp-sass-glob": "^1.1.0",
+		"postcss": "^8.3.6",
+		"postcss-import": "^14.0.2",
+		"postcss-preset-env": "^6.7.0",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"webpack": "^5.52.1",
+		"webpack-import-glob-loader": "^1.6.3"
+	}
+}

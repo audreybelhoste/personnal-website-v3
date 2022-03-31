@@ -1,0 +1,113 @@
+.btn-primary{
+	color: $color-text;
+	display: block;
+	text-align: right;
+	background-color: transparent;
+	border: none;
+	text-decoration: none;
+	cursor: pointer;
+	z-index: 2;
+	position: relative;
+	width: fit-content;
+	line-height: 1.15;
+
+	&::before,
+	&:after {
+		position: absolute;
+		content: "";
+		height: 1px;
+		background: $color-text;
+		bottom: -1px;
+	}
+
+	&:before {
+		right: 0;
+		width: 100%;
+	}
+
+	&:after {
+		left: 0;
+		width: 0;
+	}
+
+	&:hover{
+		&:before{
+			width: 0;
+			transition: all 0.2s $bezier;
+		}
+
+		&:after{
+			width: 100%;
+			transition: all 0.2s 0.3s $bezier;
+		}
+	}
+
+	@extend .font-sourceSerifPro;
+}
+
+.btn-secondary{
+	text-transform: uppercase;
+	text-decoration: none;
+	color: $color-text;
+	display: inline-block;
+	z-index: 2;
+	position: relative;
+
+	&::before,
+	&:after {
+		position: absolute;
+		content: "";
+		height: 0%;
+		width: 1px;
+		background: #000;
+	}
+
+	&:before {
+		right: 0;
+		top: 0;
+		transition: all 0.1s ease;
+	}
+
+	&:after {
+		left: 0;
+		bottom: 0;
+		transition: all 0.1s 0.2s ease;
+	}
+
+	&:hover:before {
+		transition: all 0.1s 0.2s ease;
+		height: 100%;
+	}
+
+	&:hover:after {
+		transition: all 0.1s ease;
+		height: 100%;
+	}
+
+	span{
+		padding: 10px 60px;
+		position: relative;
+		display: block;
+
+		&:before,
+		&:after {
+			position: absolute;
+			content: "";
+			background: #000;
+			height: 1px;
+			left: 0;
+		}
+		&:before {
+			top: 0;
+			width: 0%;
+			transition: all 0.1s 0.1s ease;
+		}
+		&:after {
+			bottom: 0;
+			width: 100%;
+		}
+		&:hover:before {
+			width: 100%;
+		}
+	}
+}

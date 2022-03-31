@@ -1,0 +1,135 @@
+.experiences{
+	background-color: $color-experiences;
+
+	.section__content{
+		@include tablet{
+			padding: 40px 0;
+		}
+	}
+
+	&__item{
+		position: relative;
+
+		@include tablet{
+			margin: 0 auto;
+			width: 100%;
+			max-width: 900px;
+		}
+
+		&:first-of-type{
+			&::before{
+				position: absolute;
+				content: " "; 
+				width: calc(100% + 30px);
+				height: 1px;
+				left: -15px;
+				background-color: $color-text;
+				top: 0;
+			}
+		}
+
+		@include tablet{
+			&::after{
+				position: absolute;
+				content: " "; 
+				width: calc(100% + 30px);
+				height: 1px;
+				left: -15px;
+				background-color: $color-text;
+				bottom: 0;
+			}
+		}
+
+		&__details, &__date{
+			position: relative;
+			margin: 0;
+
+			@include mobile{
+				&::after{
+					position: absolute;
+					content: " "; 
+					width: 100vw;
+					height: 1px;
+					left: -15px;
+					background-color: $color-text;
+					bottom: -1px;
+				}
+			}
+		}
+
+		&__details{
+			padding: 20px;
+			align-self: center;
+	
+			p{
+				margin: 0;
+			}
+	
+			&--bold{
+				@extend .font-semibold;
+			}
+
+			@include tablet{
+				width: 100%;
+			}
+
+			&--first, &--second{
+				@include tablet{
+					width: 50%;
+				}
+			}
+
+			&--first{
+				@include tablet{
+					&::after{
+						position: absolute;
+						content: " "; 
+						width: 1px;
+						height: 100%;
+						top: 0;
+						right: 0;
+						background-color: $color-text;
+					}
+				}
+			}
+		}
+
+		&__date{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			font-size: 64px;
+			line-height: 46px;
+			border: solid 1px $color-text;
+			border-radius: 100%;
+			min-width: 120px;
+			min-height: 120px;
+			max-width: 120px;
+			max-height: 120px;
+
+			&--double{
+				font-size: 24px;
+				line-height: 12px;
+
+				span:nth-of-type(1){
+					transform: translate(-20px, -10px);
+				}
+
+				span:nth-of-type(2){
+					transform: rotate(45deg);
+				}
+
+				span:nth-of-type(3){
+					transform: translate(20px, 10px);
+				}
+			}
+
+			@extend .font-sourceSerifPro;
+		}
+
+		@include tablet{
+			display: flex;
+		}
+	}
+}

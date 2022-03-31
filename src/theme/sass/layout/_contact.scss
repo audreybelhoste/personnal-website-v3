@@ -1,0 +1,180 @@
+.contact{
+	background-color: $color-contact;
+	color: $color-light;
+
+	.section__content{
+		@include huge{
+			min-height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: baseline;
+		}
+	}
+
+	form{
+		@include tablet{
+			background-color: $color-presentation;
+			background-image: url(../img/beige-paper.png);
+			border-radius: 20px;
+			max-width: 700px;
+			margin: 40px auto;	
+			display: flex;
+			padding: 20px;
+			column-gap: 60px;
+		}
+
+		@include laptop{
+			padding: 40px;
+			max-width: 800px;
+		}
+
+		input{
+			width: 100%;
+		}
+
+		input, textarea{
+			margin-bottom: 10px;
+			padding: 10px;
+
+			@include tablet{
+				border-radius: 5px;
+				border: none;
+			}
+		}
+
+		textarea{
+			min-height: 100px;
+			resize: vertical;
+			width: 100%;
+
+			@include tablet{
+				height: 100%;
+				resize: none;
+				min-width: 300px;
+			}
+		}
+
+		label{
+			text-transform: uppercase;
+			position: relative;
+			padding-right: 10px;
+			margin-right: 10px;
+			font-size: 12px;
+
+			@extend .font-semibold;
+
+			@include tablet{
+				color: $color-text;
+			}
+
+			&.required{
+				&::after{
+					content: "*";
+					color: red;
+					position: absolute;
+					top: 0;
+					right: 0;
+				}
+			}
+		}
+	}
+
+	.postcardLeft{
+		padding: 30px 0;
+		position: relative;
+
+		&::after{
+			position: absolute;
+			content: " "; 
+			width: 1px;
+			height: 100%;
+			background-color: $color-text;
+			top: 0;
+			right: -30px;
+		}
+	}
+
+	.postcardRight{
+		@include tablet{
+			padding-top: 200px;
+			position: relative;
+		}
+
+		&__formRow{
+			position: relative;
+
+			@include tablet{
+				display: flex;
+				align-items: center;
+				margin-bottom: 5px;
+
+				&::after{
+					position: absolute;
+					content: " "; 
+					width: 100%;
+					height: 1px;
+					background-color: $color-text;
+					bottom: 5px;
+					left: 0;
+				}
+			}
+
+			input{
+				flex-grow: 1;
+			}
+
+			&:last-of-type{
+				margin-bottom: 30px;
+			}
+		}
+
+		@include tablet{
+			&::before{
+				content: "";
+				background-image: url(../img/stamp1.svg);
+				background-repeat: no-repeat;
+				background-size: contain;
+				position: absolute;
+				transform: rotate(4deg);
+				top: -10px;
+				right: -20px;
+				width: 100px;
+				height: 100px;
+				opacity: 0.2;
+			}
+	
+			&::after{
+				content: "";
+				background-image: url(../img/stamp2.svg);
+				background-repeat: no-repeat;
+				background-size: contain;
+				position: absolute;
+				top: -10px;
+				right: 50px;
+				width: 100px;
+				height: 100px;
+				opacity: 0.2;
+			}
+		}
+	}
+
+	.btn-primary{
+		margin-left: auto;
+		padding: 0;
+
+		@include mobile{
+			color: $color-light;
+
+			&::before, &::after{
+				background-color: $color-light;
+			}
+		}
+	}
+}
+
+.contact__linkedin{
+	margin: 40px auto 0;
+	display: flex;
+	justify-content: center;
+	max-width: 200px;
+}

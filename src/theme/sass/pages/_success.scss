@@ -1,0 +1,41 @@
+.success{
+	background-color: $color-presentation;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	text-align: center;
+
+	&__text{
+		&__oval{
+			position: absolute;
+			top: 0 !important;
+			left: -10px !important; 
+			width: 450px;
+			height: 200px;
+			opacity: 0.2;
+	
+			@include tablet{
+				top: -50px !important;
+				left: 100px !important; 
+				width: 500px;
+				height: 300px;
+				transform: rotate(-7deg);
+			}
+	
+			@include desktop{
+				top: -200px !important;
+				left: -100px !important;
+				width: 850px;
+				height: 600px;
+			}
+		}
+	}
+
+	.btn-primary{
+		text-align: center;
+	}
+}
+

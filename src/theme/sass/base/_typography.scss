@@ -1,0 +1,13 @@
+html, body {
+	@extend .font-poppins, .font-light;
+	font-size: 16px;
+	color: $color-text;
+	line-height: 1.7;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+	@extend .font-sourceSerifPro, .font-semibold;
+	line-height: 1.4;
+}

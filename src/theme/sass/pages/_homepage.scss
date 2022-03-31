@@ -1,0 +1,52 @@
+.container{
+	@include desktop{
+		display: flex;
+	}
+}
+
+.section{
+	padding: 15px 15px 0;
+	transition: max-width 0.5s $bezier 0.3s;
+	width: 100%;
+
+	@include desktop{
+		position: relative;
+		padding: 0 0 0 100px;
+		max-height: 100vh;
+		max-width: 100px;
+		overflow: hidden;
+		position: relative;
+		cursor: pointer;
+	}
+
+	&:not(.presentation){
+		.section__content{
+			@include desktop{
+				max-height: 100vh;
+				overflow-y: scroll;
+				overflow-x: hidden;
+			}
+		}
+	}
+
+	&.active{
+		@include desktop{
+			max-width: calc(100vw - 300px);
+			cursor: default;
+	
+			.section__content{
+				transition: opacity 0.4s $bezier 0.7s;
+				opacity: 1;
+			}
+		}
+	}
+
+	.section__content{
+		transition: opacity 0.4s $bezier;
+
+		@include desktop{
+			opacity: 0;
+		}
+	}
+
+}

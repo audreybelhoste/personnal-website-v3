@@ -19,7 +19,7 @@ body{
 /* Works on Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: transparent $color-scrollbar;
+  scrollbar-color: transparent $color-secondary-dark;
 }
 
 /* Works on Chrome, Edge, and Safari */
@@ -32,6 +32,6 @@ body{
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: $color-scrollbar;
+  background-color: $color-secondary-dark;
   border-radius: 20px;
 }

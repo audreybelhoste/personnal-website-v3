@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Source+Serif+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Source+Serif+Pro:ital,wght@0,400;0,900;1,300;1,600&display=swap');
 
 .font{
 
@@ -11,10 +11,10 @@
     }
 
     &-light{
-        font-weight: 300;
+        font-weight: 400;
     }
 
     &-semibold{
-        font-weight: 600;
+        font-weight: 900;
     }
 }

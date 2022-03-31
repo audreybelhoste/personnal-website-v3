@@ -1,5 +1,5 @@
 .btn-primary{
-	color: $color-text;
+	color: $color-tertiary;
 	display: block;
 	text-align: right;
 	background-color: transparent;
@@ -16,7 +16,7 @@
 		position: absolute;
 		content: "";
 		height: 1px;
-		background: $color-text;
+		background: $color-tertiary;
 		bottom: -1px;
 	}
 

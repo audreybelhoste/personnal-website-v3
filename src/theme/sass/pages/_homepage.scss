@@ -31,7 +31,7 @@
 
 	&.active{
 		@include desktop{
-			max-width: calc(100vw - 300px);
+			max-width: calc(100vw - 200px);
 			cursor: default;
 	
 			.section__content{

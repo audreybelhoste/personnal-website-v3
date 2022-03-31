@@ -14,7 +14,7 @@
 
 		&::before{
 			content: "";
-			background-image: url(../img/arrow.svg);
+			background-image: url(../images/arrow.svg);
 			background-repeat: no-repeat;
 			background-size: contain;
 			background-position: center center;
@@ -51,10 +51,33 @@
 
 .contact{
 	.mainTitle{
+		color: $color-primary; 
+
 		&::before{
-			background-image: url(../img/arrow-light.svg);
-			border: solid 1px $color-light;
-			fill: $color-light;
+			background-image: url(../images/arrow-primary.svg);
+			border: solid 1px $color-primary; 
+		}
+	}
+}
+
+.project{
+	.mainTitle{
+		color: $color-quaternary; 
+
+		&::before{
+			background-image: url(../images/arrow-quaternary.svg);
+			border: solid 1px $color-quaternary; 
+		}
+	}
+}
+
+.presentation{
+	.mainTitle{
+		color: $color-tertiary; 
+
+		&::before{
+			background-image: url(../images/arrow-tertiary.svg);
+			border: solid 1px $color-tertiary; 
 		}
 	}
 }

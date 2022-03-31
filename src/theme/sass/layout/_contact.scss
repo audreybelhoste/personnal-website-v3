@@ -1,5 +1,5 @@
 .contact{
-	background-color: $color-contact;
+	background-color: $color-tertiary;
 	color: $color-light;
 
 	.section__content{
@@ -13,8 +13,8 @@
 
 	form{
 		@include tablet{
-			background-color: $color-presentation;
-			background-image: url(../img/beige-paper.png);
+			background-color: $color-light;
+			background-image: url(../images/beige-paper.png);
 			border-radius: 20px;
 			max-width: 700px;
 			margin: 40px auto;	

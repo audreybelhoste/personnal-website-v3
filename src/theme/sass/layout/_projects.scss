@@ -1,12 +1,20 @@
 .project{
 	background-color: $color-secondary;
 	
+	.section__content{
+		padding: 0 0 40px;
+
+		@include laptop{
+			padding: 40px 0;
+		}
+	}
+
 	&__item{
 		max-width: 1200px;
 		margin: 0 auto 40px;
 
-		&:first-child{
-			margin-top: 40px;
+		&:last-child{
+			margin-bottom: 0;
 		}
 
 		&__container{
@@ -137,21 +145,27 @@
 				bottom: 0;
 			}
 			
-			div:first-of-type{
-				min-width: 30%;
-				position: relative;
-
-				&::after{
-					position: absolute;
-					content: " "; 
-					width: 1px;
-					height: 100%;
-					top: 0;
-					right: 0;
-					background-color: $color-quaternary;
+			div{
+				&:first-of-type{
+					min-width: 30%;
+					position: relative;
+	
+					&::after{
+						position: absolute;
+						content: " "; 
+						width: 1px;
+						height: 100%;
+						top: 0;
+						right: 0;
+						background-color: $color-quaternary;
+					}
+				}
+	
+				&:nth-of-type(2){
+					padding-left: 15px;
 				}
 			}
-
+			
 			&__title{
 				text-transform: uppercase;
 			}
@@ -159,18 +173,21 @@
 			&__text{
 				@extend .font-sourceSerifPro, .font-semibold;
 			}
-
-			p{
-				padding: 0 15px;
-			}
 		}
 
 		&__description{
-			&__title{
-				font-style: italic;
-				font-size: 18px;
+			padding: 15px 0;
 
-				@extend .font-sourceSerifPro, .font-semibold;
+			&__content{
+				@extend .wysiwyg;
+
+				em{
+					font-style: italic;
+					font-size: 18px;
+	
+					@extend .font-sourceSerifPro, .font-semibold;
+				}
+
 			}
 		}
 	}
@@ -179,10 +196,7 @@
 		margin: 50px auto 10px;
 		display: flex;
 		column-gap: 30px;
+		row-gap: 15px;
 		flex-wrap: wrap;
-
-		a{
-			margin-bottom: 20px;
-		}
 	}
 }

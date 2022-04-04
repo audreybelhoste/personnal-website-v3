@@ -35,3 +35,19 @@ body{
   background-color: $color-secondary-dark;
   border-radius: 20px;
 }
+
+.wysiwyg{
+
+	> *{
+
+		&:first-child{
+			margin-top: 0;
+		}
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+	}
+
+}

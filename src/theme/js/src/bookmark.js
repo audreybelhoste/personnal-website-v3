@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const sections = document.querySelectorAll('.section');
 
-    console.log(sections)
-
     sections.forEach(element => {
         element.addEventListener('click', event => {
 

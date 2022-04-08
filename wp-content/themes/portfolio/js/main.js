@@ -9,7 +9,6 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   var sections = document.querySelectorAll('.section');
-  console.log(sections);
   sections.forEach(function (element) {
     element.addEventListener('click', function (event) {
       document.querySelector('.active').classList.remove('active');
@@ -32,6 +31,21 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector('#projects').classList.add('active');
     document.querySelector('#presentation').classList.remove('active');
   }
+});
+
+/***/ }),
+
+/***/ "./theme/js/src/disabledInput.js":
+/*!***************************************!*\
+  !*** ./theme/js/src/disabledInput.js ***!
+  \***************************************/
+/***/ (function() {
+
+document.addEventListener("DOMContentLoaded", function () {
+  var disabledInput = document.querySelectorAll('.disabled input');
+  disabledInput.forEach(function (input) {
+    input.setAttribute("disabled", true);
+  });
 });
 
 /***/ }),
@@ -1175,7 +1189,10 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _src_bookmark_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./src/bookmark.js */ "./theme/js/src/bookmark.js");
 /* harmony import */ var _src_bookmark_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_src_bookmark_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _src_parallax_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./src/parallax.js */ "./theme/js/src/parallax.js");
+/* harmony import */ var _src_disabledInput_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./src/disabledInput.js */ "./theme/js/src/disabledInput.js");
+/* harmony import */ var _src_disabledInput_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_src_disabledInput_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _src_parallax_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./src/parallax.js */ "./theme/js/src/parallax.js");
+
 
 
 }();

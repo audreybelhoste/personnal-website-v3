@@ -1,7 +1,10 @@
 <section id="contact" class="section contact right">
     <h2 class="mainTitle">Contact</h2>
     <div class="section__content">
-		<form action="/pages/success" name="contact" method="POST" data-netlify="true">
+		<div class="formContainer">
+			<?php echo do_shortcode('[gravityform id="1" title="false" description="false" ajax="true"]'); ?> 
+		</div>
+		<!-- <form action="/pages/success" name="contact" method="POST" data-netlify="true">
 			<div class="postcardLeft">
 				<label for="message" class="required">Message</label>
 				<textarea id="message" name="message" required="true"></textarea>
@@ -21,7 +24,7 @@
 				</div>
 				<button type="submit" class="btn-primary">Envoyer le message</button>
 			</div>
-		</form>
+		</form> -->
 		<div class="contact__linkedin">
 			<a href="https://www.linkedin.com/in/audrey-belhoste-096b8118a/" target="_blank">
 				<img src="<?= get_template_directory_uri(); ?>/images/linkedin.svg" alt="Me connacter sur Linkedin">
